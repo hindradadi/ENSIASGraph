@@ -12,5 +12,6 @@ $raw_data = curl_exec($ch);
 curl_close($ch);
 $fp = fopen($save_as, 'x');
 fwrite($fp, $raw_data);
+echo 'hello';
 fclose($fp);
 ?>
