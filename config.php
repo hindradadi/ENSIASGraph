@@ -19,14 +19,14 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  padding: 5px;
+  background: linear-gradient(135deg,  rgb(176,168,168),  rgb(176,168,168));
 }
 .container{
   max-width: 700px;
   width: 100%;
   background-color: #fff;
-  padding: 25px 30px;
+  padding: 20px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
@@ -71,6 +71,15 @@ form .input-box span.details{
   border-bottom-width: 2px;
   transition: all 0.3s ease;
 }
+.hello{
+  padding-top: 90px  ;
+
+}
+.imagee{
+  margin: 40px 0px 10px -10px;
+
+}
+
 .user-details .input-box input:focus,
 .user-details .input-box input:valid{
   border-color: #9b59b6;
@@ -123,11 +132,11 @@ form .input-box span.details{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   background: linear-gradient(135deg, rgb(213,161,161), rgb(199,29,29));
  }
  form .button input:hover{
   /* transform: scale(0.99); */
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  background: linear-gradient(-135deg, rgb(191,102,102), rgb(199,29,29));
   }
  @media(max-width: 584px){
  .container{
@@ -158,66 +167,77 @@ form .user-details .input-box{
    </head>
 <body>
   <div class="container">
-    <div class="title">Générer une courbe</div>
+  <img src='ensiasgrapht.png' class="imagee" style= 'width:120px ; height:120px;  float:right; vertical-align:top;'/>
+  
+   <div class="hello">
+  <div class="title"> Welcome to Ensias Graph
+  
+  
+  </div>
+</div>
     <div class="content">
       <form action="test.php" method="post">
         <div class="user-details">
           <div class="input-box">
-            <span class="details">Titre du graph</span>
-            <input type="text" name="title" placeholder="Entrer le titre du graph" required>
+            <span class="details">Graph title  </span>
+            <input type="text" name="title" placeholder="" required>
           </div>
           <div class="input-box">
-            <span class="details">Couleur de l'arrière plan</span>
-            <input type="text" name="color_bg" placeholder="Entrer la couleur de l'arrière plan" required>
+            <span class="details">Background color</span>
+            <input type="color" name="color_bg">
           </div>
           <div class="input-box">
-            <span class="details">Couleur de la courbe</span>
-            <input type="text" name="color_cb" placeholder="Enter la couleur de la courbe" required>
+            <span class="details"> Chart color</span>
+            <input type="color" name="color_cb">
           </div>
           <div class="input-box">
-            <span class="details">Couleur des axes</span>
-            <input type="text" name="color_axe" placeholder="Entrer la couleur des axes" required>
+            <span class="details"> Axes color</span>
+            <input type="color" name="color_axe">
           </div>
           <div class="input-box">
-            <span class="details">Nom de l'axe des ordonnées</span>
-            <input type="text" name="axe_x" placeholder="Entrer le nom de l'axe des ordonnées" required>
+            <span class="details">X Axis:</span>
+            <input type="text" name="axe_x">
           </div>
           <div class="input-box">
-            <span class="details">Nom de l'axe des abscisses</span>
-            <input type="text" name="axe_y" placeholder="Entrer le nom de l'axe des abscisses" required>
+            <span class="details">Y Axis:</span>
+            <input type="text" name="axe_y">
           </div>
           <div class="input-box">
-            <span class="details">Couleur du texte</span>
-            <input type="text" name="color_text" placeholder="Entrer la couleur du texte" required>
+            <span class="details">Text color</span>
+            <input type="color" name="color_text">
           </div>
         </div>
         <div class="gender-details">
-          <input type="radio" name="chart" value="courbe" id="dot-1">
+          <input type="radio" name="chart" value="line" id="dot-1">
           <input type="radio" name="chart" value="bar" id="dot-2">
           <input type="radio" name="chart" value="pie" id="dot-3">
           <span class="gender-title">Graph</span>
           <div class="category">
             <label for="dot-1">
             <span class="dot one"></span>
-            <span class="gender">Courbe</span>
+            <span class="gender">Line chart</span>
           </label>
           <label for="dot-2">
             <span class="dot two"></span>
-            <span class="gender">Histogramme</span>
+            <span class="gender">Bar chart</span>
           </label>
           <label for="dot-3">
             <span class="dot three"></span>
-            <span class="gender">Pie</span>
+            <span class="gender">Pie chart</span>
             </label>
           </div>
         </div>
         <div class="button">
-          <input type="submit" name="submit" value="Générer">
+          <input type="submit" name="submit" value="Generate">
+        </div>
+        <div class="details">
+          <p><b>NB:</b> You have to complete all the fields just if you select line or bar charts</p>
         </div>
       </form>
     </div>
+   
   </div>
-
+  
 </body>
 </html>
 
